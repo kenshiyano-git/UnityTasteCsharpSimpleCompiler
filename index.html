@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity風C#オンラインコンパイラ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unity風C#オンラインコンパイラ</h1>
+        <p>ローカル変数、乱数などは使えません。簡単な機能のみです。</p>
+        
+        <!-- エディタ -->
+        <div class="editor-container">
+            <h2>エディタ</h2>
+            <textarea id="editor" rows="15" cols="80">
+using System;
+
+public class sampleclass 
+{
+    public int number;
+
+    public void Start()
+    {
+        number = 1;
+        Debug.Log("Startされた");
+    }
+
+    public void Update()
+    {
+        Debug.Log(number + "回目のUpdate");
+        number = number + 1;
+    }
+}
+                
+            </textarea>
+        </div>
+
+        <!-- 実行ボタン -->
+        <button id="runButton">実行</button>
+        <!-- 実行を停止ボタン -->
+        <button id="stopButton">実行を停止</button>
+        <!-- エディタをクリアボタン -->
+        <button id="clearEditorButton">エディタをクリア</button>
+        <!-- コンソールをクリアボタン -->
+        <button id="clearConsoleButton">コンソールをクリア</button>
+
+
+        <!-- コンソール -->
+        <div id="output">
+            <h2>コンソール</h2>
+            <div id="consoleOutput"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
