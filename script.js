@@ -115,8 +115,8 @@ document.getElementById("stopButton").addEventListener("click", () => {
     if (simulator.updateInterval) {
         clearInterval(simulator.updateInterval); 
         simulator.updateInterval = null; 
-        console.log("Update の実行を停止しました");
-        document.getElementById("consoleOutput").innerHTML += "<span style='color: red;'>実行を停止しました</span><br>";
+        console.log("プログラムを停止しました");
+        document.getElementById("consoleOutput").innerHTML += "<span style='color: red;'>プログラムを停止しました</span><br>";
     }
 });
 
